@@ -1,0 +1,67 @@
+{% extends "headerui.html" %}
+
+{% block body %}
+	<!-- START LANDING -->
+<div class="page-header page-header-large">
+	<div class="page-header-bg">
+		<img src="{{ url_for('static', filename='imgs/obdmHeaderCollage5.jpg') }}" alt="OBDM Header" />
+	</div>
+	<div class="page-header-content">
+		<div class="page-header-inner">
+			<div class="page-header-title">
+				<h1><img class="obdm-logo" src="{{ url_for('static', filename='imgs/obdmStatement.jpg') }}" alt="OBDM Statement" width=""></h1>
+				<p>
+					<a href="http://ourbigdumbmouth.libsyn.com/rss">Subscribe <i class="ion-social-rss"></i></a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- START RECENT PODCAST -->
+<div class="app-group">
+	<div class="app-statement">
+		<h4>Latest Podcast</h4>
+	</div>
+
+	<div class="container-large">
+
+         {%  for post in PODLIST[0 : 1] %}
+
+            <h2 class="text-success">{{ post.get('podTitle') }}</h2>
+            <p>{{ post.get('podSummary') }}</p>
+            <p>{{ post.get('podDate') }}</p>
+
+             <audio controls>
+                 <source src="{{ post.get('podURL') }}" type="audio/mpeg">
+             </audio>
+
+            <p><a class="btn btn-default" href="{{ post.get('podURL') }}">Direct Link</a></p>
+             <p><a class="btn btn-default" href="/podcast/">More Podcasts</a></p>
+
+
+        {% endfor %}
+
+
+	</div>
+</div>
+
+
+   <!-- START LASTEST RUN DOWN -->
+
+    <div class="app-group app-section-invert">
+    	<div class="app-statement">
+		    <h4>Latest News</h4>
+	    </div>
+            <div class="container-large">
+                {% for post in NEWSLIST[0 : 5] %}
+                <h4><a href="{{ post.get('newsURL') }}" target="_blank">{{ post.get('newsTitle') }}</a></h4>
+
+                <hr/>
+
+                {% endfor %}
+            </div>
+    </div>
+
+{% endblock %}

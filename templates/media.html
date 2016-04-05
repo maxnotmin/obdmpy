@@ -1,0 +1,32 @@
+{% extends "headerui.html" %}
+
+{% block body %}
+    <!-- START ART -->
+    <div class="page-header page-header-med">
+        <div class="page-header-bg">
+            <img src="{{ url_for('static', filename='imgs/obdmHeaderCollageSizing.jpg') }}" alt="OBDM MEDIA HEADER" />
+        </div>
+    <div class="page-header-content">
+        </div>
+
+    </div>
+
+    <!-- START NEWS -->
+    <div class="app-group">
+	<div class="app-statement">
+	</div>
+
+	<div class="container-large">
+
+        {% for post in AUDIOFILES %}
+            <h3><a href="../static/audio/{{ post }}" target="_blank">{{ post }}</a></h3>
+
+            <hr/>
+
+        {% endfor %}
+
+
+    </div>
+    </div>
+
+{% endblock %}

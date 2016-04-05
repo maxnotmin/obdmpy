@@ -1,0 +1,388 @@
+@charset "UTF-8";
+/**
+ * "Pro" product page styles
+ *
+ * If a style will -only- be used on the HitFilm 4 Pro pages rather than
+ * other product pages, it should go here. Otherwise it belongs in
+ * global-new/_product.scss
+ *
+ * 1. Modifications & extensions to core styles
+ * 2. Elements shared across all Pro pages
+ * 3. Index/Overview elements
+ * 4. Explore page elements
+ */
+/**
+ * Modifications & extensions of core styles
+ */
+@media screen and (max-width: 800px) {
+  .page-content {
+    margin: 0; }
+    .page-content .app-group:last-child .app-section {
+      padding-bottom: 1.5em; } }
+
+.page-header-overview {
+  overflow-y: hidden; }
+  .page-header-overview .page-header-content {
+    background: -webkit-linear-gradient(top, transparent 0%, transparent 50%, black 100%);
+    background: linear-gradient(to bottom, transparent 0%, transparent 50%, black 100%); }
+  .page-header-overview .page-header-inner {
+    position: relative;
+    bottom: 5em;
+    bottom: 10vh; }
+
+.app-statement {
+  border-bottom: 0; }
+
+/**
+ * Elements specifically created for the Pro product pages
+ */
+.feature-checklist {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-width: 300px;
+     -moz-column-width: 300px;
+          column-width: 300px; }
+  .feature-checklist li {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    padding-left: 1.5em;
+    line-height: 1.2;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    box-sizing: border-box; }
+  .feature-checklist li::before {
+    position: absolute;
+    top: 0.05em;
+    left: 0;
+    color: #00EFD6;
+    font-size: 1.1em;
+    display: inline-block;
+    font-family: "Ionicons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    speak: none;
+    content: ""; }
+
+.link-detail {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  background-color: rgba(70, 70, 70, 0.6);
+  color: #fff;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; }
+  .link-detail::after {
+    margin-left: 0.5em;
+    display: inline-block;
+    font-family: "Ionicons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    speak: none;
+    content: "";
+    font-size: 0.8em;
+    vertical-align: middle; }
+
+.link-detail:hover {
+  background-color: rgba(70, 70, 70, 0.8);
+  color: #fff; }
+
+.tech-format {
+  display: inline-block;
+  border: 1px solid #333;
+  border-radius: 0.25em;
+  padding: 0 0.25em;
+  font-size: 0.8em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase; }
+
+.tech-os {
+  margin: 0 0.25em;
+  color: #404040;
+  font-size: 4em; }
+
+.ignite-logo {
+  max-width: 80%; }
+  @media screen and (min-width: 1000px) {
+    .ignite-logo {
+      max-width: 710px; } }
+
+/**
+ * Styles for Index/Overview
+ */
+.choose-wrapper {
+  padding: 1.5em 0;
+  background-color: #000;
+  color: #fff; }
+
+.choose {
+  display: block;
+  max-width: 1600px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
+  .choose h3 {
+    font-size: 1.21em;
+    color: inherit;
+    text-transform: uppercase; }
+    @media screen and (min-width: 600px) and (min-height: 400px) {
+      .choose h3 {
+        font-size: 1.44em; } }
+    @media screen and (min-width: 900px) and (min-height: 600px) {
+      .choose h3 {
+        font-size: 1.69em; } }
+    @media screen and (min-width: 1200px) and (min-height: 800px) {
+      .choose h3 {
+        font-size: 1.96em; } }
+  .choose a {
+    display: inline-block;
+    float: left;
+    width: 33.3%;
+    padding: 1.5em;
+    box-sizing: border-box;
+    color: #fff; }
+  .choose a:hover i {
+    top: 10px;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-name: bounce;
+            animation-name: bounce;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate; }
+  .choose p {
+    margin-bottom: 10px;
+    color: #ccc; }
+  .choose i {
+    position: relative;
+    top: 0;
+    font-size: 1.2em; }
+
+@media screen and (max-width: 480px) {
+  .choose-wrapper {
+    padding: 0; }
+  .choose a {
+    width: 100%;
+    clear: left; } }
+
+@-webkit-keyframes bounce {
+  from {
+    top: 0; }
+  to {
+    top: 10px; } }
+
+@keyframes bounce {
+  from {
+    top: 0; }
+  to {
+    top: 10px; } }
+
+.section-vfx {
+  border-bottom: none;
+  background-color: #101010;
+  color: #ccc; }
+  .section-vfx .section-vfx-bg {
+    margin-top: 0;
+    padding-top: 1.5em;
+    background-image: url('//static.hitfilm.com/v/f3bc6f9a1a67117cbc6d0a7e7471330ee54502f5/images/product/hitfilm-4-pro/overview/vfx-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto; }
+  .section-vfx h2, .section-vfx h3 {
+    color: white; }
+  .section-vfx .app-section-pop {
+    background-color: #222;
+    background-image: url('//static.hitfilm.com/v/f3bc6f9a1a67117cbc6d0a7e7471330ee54502f5/images/product/hitfilm-4-pro/overview/vfx-texture.png'); }
+
+.section-motion-graphics {
+  border-bottom: none;
+  background-color: #D9E2F1;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: black; }
+  .section-motion-graphics .section-motion-graphics-bg {
+    margin-top: 0;
+    padding-top: 1.5em;
+    background-image: url('//static.hitfilm.com/v/f3bc6f9a1a67117cbc6d0a7e7471330ee54502f5/images/product/hitfilm-4-pro/overview/motion-graphics-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto; }
+  .section-motion-graphics .app-section-pop {
+    background-color: #f0f0f0;
+    background-image: url('//static.hitfilm.com/v/f3bc6f9a1a67117cbc6d0a7e7471330ee54502f5/images/product/hitfilm-4-pro/overview/motion-graphics-texture.png');
+    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.1); }
+
+.section-vlogger {
+  border-bottom: none;
+  background-color: #f3ecef;
+  background-repeat: no-repeat;
+  background-size: 100%; }
+  .section-vlogger .section-vlogger-bg {
+    margin-top: 0;
+    padding-top: 1.5em;
+    background-image: url('//static.hitfilm.com/v/f3bc6f9a1a67117cbc6d0a7e7471330ee54502f5/images/product/hitfilm-4-pro/overview/vlogger-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto; }
+  .section-vlogger .app-section-pop {
+    background-color: #eee;
+    background-image: url('//static.hitfilm.com/v/f3bc6f9a1a67117cbc6d0a7e7471330ee54502f5/images/product/hitfilm-4-pro/overview/vlogger-texture.png');
+    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.1); }
+
+.section-community {
+  padding: 3em 1.5em;
+  text-align: center;
+  background-image: url('//static.hitfilm.com/v/f3bc6f9a1a67117cbc6d0a7e7471330ee54502f5/images/product/hitfilm-4-pro/overview/community-background.png');
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('//static.hitfilm.com/v/f3bc6f9a1a67117cbc6d0a7e7471330ee54502f5/images/product/hitfilm-4-pro/overview/community-background.png');
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('//static.hitfilm.com/v/f3bc6f9a1a67117cbc6d0a7e7471330ee54502f5/images/product/hitfilm-4-pro/overview/community-background.png');
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .section-community p {
+    font-size: 1.1em;
+    text-align: center;
+    color: white; }
+    @media screen and (min-width: 600px) and (min-height: 400px) {
+      .section-community p {
+        font-size: 1.2em; } }
+    @media screen and (min-width: 900px) and (min-height: 600px) {
+      .section-community p {
+        font-size: 1.3em; } }
+    @media screen and (min-width: 1200px) and (min-height: 800px) {
+      .section-community p {
+        font-size: 1.4em; } }
+  .section-community .counter-number {
+    display: block;
+    font-size: 4em;
+    line-height: 1;
+    color: #fff; }
+
+.annotated {
+  position: relative;
+  margin-bottom: 1.5em; }
+  .annotated .media {
+    z-index: 1;
+    margin-bottom: 0; }
+
+.annotations {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(70, 70, 70, 0.6);
+  zoom: 1; }
+  .annotations:after {
+    content: '.';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    clear: both; }
+
+.annotations li {
+  margin: 0;
+  padding: 0; }
+
+.annotations li a {
+  display: block;
+  position: relative;
+  padding: 0.5em 0.75em;
+  color: #fff;
+  font-size: 0.90909em;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; }
+  @media screen and (min-width: 600px) and (min-height: 400px) {
+    .annotations li a {
+      font-size: 0.83333em; } }
+  @media screen and (min-width: 900px) and (min-height: 600px) {
+    .annotations li a {
+      font-size: 0.76923em; } }
+  @media screen and (min-width: 1200px) and (min-height: 800px) {
+    .annotations li a {
+      font-size: 0.71429em; } }
+  .annotations li a:hover {
+    background-color: rgba(70, 70, 70, 0.8); }
+
+@media screen and (min-width: 800px) {
+  .annotations li {
+    float: left;
+    width: 25%; }
+  .annotations li:first-child:nth-last-child(3),
+  .annotations li:first-child:nth-last-child(3) ~ li {
+    width: 33.3333%; } }
+
+.review-rotator {
+  position: relative;
+  margin-top: 1em;
+  border-top: 3px solid #444;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  font-size: 1.21em;
+  text-align: center;
+  box-sizing: border-box; }
+  @media screen and (min-width: 600px) and (min-height: 400px) {
+    .review-rotator {
+      font-size: 1.44em; } }
+  @media screen and (min-width: 900px) and (min-height: 600px) {
+    .review-rotator {
+      font-size: 1.69em; } }
+  @media screen and (min-width: 1200px) and (min-height: 800px) {
+    .review-rotator {
+      font-size: 1.96em; } }
+  .review-rotator blockquote {
+    position: relative;
+    top: 0.5em;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    width: 100%;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+    line-height: 1.2; }
+    .review-rotator blockquote p {
+      margin-bottom: 0.2em; }
+      .review-rotator blockquote p::before {
+        content: '\201c'; }
+      .review-rotator blockquote p::after {
+        content: '\201d'; }
+    .review-rotator blockquote cite {
+      font-size: 0.7em; }
+      .review-rotator blockquote cite::before {
+        content: '\2015'; }
+
+/**
+ * Styles specifically for Explore pages.
+ */
+.grade-thumb-selector {
+  display: none;
+  float: left;
+  width: 50%;
+  padding: 0.5em;
+  box-sizing: border-box; }
+
+@media screen and (min-width: 960px) {
+  .grade-thumb-selector {
+    width: 20%; } }

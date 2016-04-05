@@ -1,0 +1,30 @@
+{% extends "headerui.html" %}
+
+{% block body %}
+    <!-- START ART -->
+    <div class="page-header page-header-med">
+        <div class="page-header-bg">
+            <img src="{{ url_for('static', filename='imgs/obdmHeaderNewsCol.jpg') }}" alt="OBDM NEWS HEADER" />
+        </div>
+    <div class="page-header-content">
+        </div>
+
+    </div>
+
+    <!-- START NEWS -->
+    <div class="app-group">
+	<div class="app-statement">
+	</div>
+
+	<div class="container-large">
+
+        {% for post in NEWSLIST %}
+            <h3><a href="{{ post.get('newsURL') }}" target="_blank">{{ post.get('newsTitle') }}</a></h3>
+
+            <hr/>
+
+        {% endfor %}
+    </div>
+    </div>
+
+{% endblock %}

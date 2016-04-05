@@ -1,0 +1,56 @@
+{% extends "headerui.html" %}
+
+{% block body %}
+        <!-- START ART -->
+    <div class="page-header page-header-med">
+        <div class="page-header-bg">
+            <img src="{{ url_for('static', filename='imgs/obdmHeaderCollageSizing.jpg') }}" alt="OBDM ABOUT HEADER" />
+        </div>
+    <div class="page-header-content">
+        </div>
+
+    </div>
+
+
+
+    <div class="app-group">
+
+        <div class="container-large">
+
+        <h2>Join Us</h2>
+            <p>OBDM is a weekly news / conspiracy / comedy podcast. We have highly produced audio and we drink a lot. JFK, UFOs,  Geopolitics. Started in 2007, OBDM has tackling the hard news for a long time. You'll be hooked after 2 episodes.</p>
+            <p>Subscribe to the RSS feed to get all the episodes
+                <a class="btn btn-default btn-large" href="http://ourbigdumbmouth.libsyn.com/rss" target="_blank">RSS FEED</a>
+                <a class="btn btn-default btn-large" href="itpc://ourbigdumbmouth.libsyn.com/rss" target="_blank">ITUNES</a>
+                <a class="btn btn-default btn-large" href="http://www.stitcher.com/podcast/our-big-dumb-mouth" target="_blank">STITCHER</a>
+            </p>
+
+
+     <h3>Listener Reviews</h3>
+        <blockquote>
+        <h4>A nice blend of comedy and conspiracy</h4>
+        <p>I found OBDM a few months ago when I was looking for a podcast with a fun approach to conspiracy. I'm more interested in just hearing what conspiracies are out there over getting caught up in the fear mongering and intensity that most of the other conspiracy shows seem to off. What I like about this show is that it's a comedy show that's hesitant to become a conspiracy show which makes it a perfect blend of both. I actually like their attempt to keep the balance. I also really like their non-conspiracy news segments, which is another staple of the show. This show also has the best sound quality of any of the independent podcasts that I've heard.</p>
+        <cite>from iTunes 2015, Their Big Dumb Fan</cite>
+        </blockquote>
+
+        <blockquote>
+        <h4>Awesome little known show</h4>
+        <p>This is a very funny and informative show that seems to unknown to way too many people. Their production and sound quality is on par with the biggest named podcasts. I would recommend this to people who into comedy as well as geopolitical issues. It should be noted that it is definitely R rated.</p>
+        <cite>from Stitcher, Operator1983</cite>
+        </blockquote>
+                <h3>Donate</h3>
+                <p>This show isn't cheap to put on. Our high production and hosting costs money. We love to do the show and hope you enjoy it as well. Donate if you can.</p>
+                <p><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                        ">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                </p>
+
+    </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends "headerui.html" %}
+
+{% block body %}
+    <!-- TOP IMG -->
+        <div class="page-header page-header-med">
+        <div class="page-header-bg">
+            <img src="{{ url_for('static', filename='imgs/obdmHeaderPaul.jpg') }}" alt="Paul Bearer" />
+        </div>
+    <div class="page-header-content">
+        </div>
+
+    </div>
+
+
+
+    <div class="app-group">
+	<div class="app-statement">
+    <! -- FIRST ITEM -->
+
+
+
+	<div class="post-content">
+        {% for post in CRITTERLIST %}
+
+        <h2>{{ post.get('itemTitle') }}</h2>
+
+        <div class="hangright">
+            <div class="callout paul">
+                    <div class="media">
+                            <img src="{{ url_for('static', filename=post.get('img01')) }}" class="">
+                    </div>
+
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+
+            <p style="text-align: left;">{{ post.get('itemPara') }}</p>
+            <br/>
+            <h5>{{ post.get('itemSize') }}</h5>
+            <h5>${{ post.get('itemCost') }}, includes shipping</h5>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+                  <!-- Identify your business so that you can collect the payments. -->
+                  <input type="hidden" name="business" value="herschelgomez@xyzzyu.com">
+
+                  <!-- Specify a Buy Now button. -->
+                  <input type="hidden" name="cmd" value="_xclick">
+
+                  <!-- Specify details about the item that buyers will purchase. -->
+                  <input type="hidden" name="item_name" value="{{ post.get('itemName') }}">
+                  <input type="hidden" name="amount" value="{{ post.get('itemCost') }}">
+                  <input type="hidden" name="currency_code" value="USD">
+
+                  <!-- Display the payment button. -->
+                  <input type="image" name="submit" border="0"
+                  src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"
+                  alt="PayPal - The safer, easier way to pay online">
+                  <img alt="" border="0" width="1" height="1"
+                  src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+
+            </form>
+        <hr/>
+        {% endfor %}
+        <!-- END FIRST ITEM -->
+
+
+    </div>
+
+
+
+    </div>
+    </div>
+    </div>
+
+{% endblock %}

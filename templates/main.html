@@ -1,0 +1,25 @@
+{% extends "header.html" %}
+
+<div class="container" xmlns="http://www.w3.org/1999/html">
+{% block body %}
+
+        {%  for post in PODLIST[0 : 100] %}
+
+            <h1 class="text-success">{{ post.get('podTitle') }}</h1>
+            <p>{{ post.get('podSummary') }}</p>
+            <p>{{ post.get('podDate') }}</p>
+            <p><a class="btn btn-default" href="{{ post.get('podURL') }}">{{ post.get('podURL') }}</a></p>
+            <hr>
+
+        {% endfor %}
+    {% endblock %}
+
+<footer>
+<a class="btn btn-default" href="http://ourbigdumbmouth.libsyn.com/rss">RSS FEED</a>
+</footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
+</body>
+</html>

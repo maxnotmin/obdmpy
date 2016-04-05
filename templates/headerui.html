@@ -1,0 +1,139 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif<]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta name="ROBOTS" content="INDEX,FOLLOW">
+		<meta name="revisit-after" content="3 Days">
+
+		<meta http-equiv="imagetoolbar" content="no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<meta name="copyright" content="2016 Our Big Dumb Mouth. All rights reserved.">
+
+        <meta name="description" content="OBDM is a weekly news / conspiracy / comedy podcast. We have highly produced audio and we drink a lot. JFK, UFOs, Geopolitics. We hit it all. After two episodes you'll be hooked.">
+        <meta name="keywords" content="conspriacy, paranormal, podcast, news, current events, humor, comedy, radio">
+        <meta name="author" content="The SnowMan">
+
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="cleartype" content="on">
+
+
+        <link rel="shortcut icon" href="static/imgs/favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon" href="https://s3.amazonaws.com/fxhome-static/images/global/hf/apple-touch-icon-iphone@2x.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="static/imgs/apple-touch-icon-iphone@2x.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="static/imgs/apple-touch-icon-iphone@3x.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="static/imgs/apple-touch-icon-ipad@1x.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="static/imgs/apple-touch-icon-ipad@2x.png">
+
+
+		<title>OBDM</title>
+
+
+		<!-- HTML 5 tag fix IE8 -->
+		<!--[if lt IE 9]>
+		<script type="text/javascript">
+			//document.createElement('header');
+			document.createElement('hgroup');
+			document.createElement('nav');
+			document.createElement('menu');
+			document.createElement('section');
+			document.createElement('article');
+			document.createElement('aside');
+			document.createElement('footer');
+		</script>
+		<![endif]-->
+
+		<link href="{{ url_for('static', filename='css/global-new.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/pro.css') }}" rel="stylesheet">
+		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-migrate-1.js') }}"></script>
+
+		<script type="text/javascript" src="{{ url_for('static', filename='js/global.js') }}"></script>
+
+		<style type="text/css">.fancybox-margin{margin-right:15px;}</style>
+
+
+
+
+</head>
+	<body class="">
+		<!--[if lte IE 9]>
+        <div class="old-browser-warning">
+            <p>You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> to better experience this site.</p>
+        </div>
+        <![endif]-->
+		<nav class="nav nav-fixed">
+			<div class="nav-brand">
+				<div class="nav-brand-logo shadowed"><img src="{{ url_for('static', filename=postit) }}"/></div>
+
+            </div>
+			<ul class="shadowed">
+				<li><a href="#more" class="nav-extended-toggle nav-toggle-closed"><span style="font-weight: 500;">MENU</span><span class="nav-menu-icon">
+                    <span class="nav-menu-icon-top"></span>
+                    <span class="nav-menu-icon-middle"></span>
+                    <span class="nav-menu-icon-bottom"></span></span></a>
+                </li>
+			</ul>
+			<div id="more" class="nav-extended">
+				<div class="nav-extended-content">
+					<ul class="nav-links-primary">
+						<li><a href="/">Home</a></li>
+						<li><a href="/podcast/">Podcast</a></li>
+						<li><a href="/news/">News</a></li>
+					  <!-- <li><a href="/rundown/">Rundown</a> -->
+                      <!--  <li><a href="/classics/">Classic Stories</a> -->
+
+					</ul>
+					<ul class="nav-links-secondary">
+						<li><a href="/about/">About Us</a></li>
+						<li><a href="friends">Friends</a></li>
+
+					</ul>
+					<ul class="nav-links-social">
+						<li><a href="https://facebook.com/obdmnews" title="Facebook"><i class="ion-social-facebook"></i></a></li>
+						<li><a href="https://twitter.com/obdmlol" title="Twitter"><i class="ion-social-twitter"></i></a></li>
+						<li><a href="https://www.youtube.com/user/ourbigdumbmouth" title="YouTube"><i class="ion-social-youtube"></i></a></li>
+                        <li><a href="tel://1-614-388-9109" title="Telephone"><i class="ion-ios-telephone"></i></a></li>
+                        <li><a href="skype:ourbigdumbmouth?call" title="Skype"><i class="ion-social-skype"></i></a></li>
+					</ul>
+
+					<div class="nav-spacer"></div>
+
+					<div class="nav-footer">
+
+						<p class="copyright">© 2016 Our Big Dumb Mouth All rights reserved.</p>
+
+						<ul class="nav-links-tertiary">
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+    {% block body %}
+
+    {% endblock %}
+
+
+
+
+    <div class="app-cta app-cta-ignite">
+		<div class="app-cta-inner">
+            Built with
+            <a href="#" title="RSS"><i class="ion-social-html5"></i></a>
+            <a href="#" title="RSS"><i class="ion-social-javascript"></i></a>
+            <a href="#" title="RSS"><i class="ion-social-python"></i></a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/fancybox.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

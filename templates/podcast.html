@@ -1,0 +1,33 @@
+{% extends "headerui.html" %}
+
+{% block body %}
+        <!-- START ART -->
+    <div class="page-header page-header-med">
+        <div class="page-header-bg">
+            <img src="{{ url_for('static', filename='imgs/obdmHeaderCollagePod.jpg') }}" alt="OBDM NEWS HEADER" />
+        </div>
+    <div class="page-header-content">
+        </div>
+
+    </div>
+
+
+    <div class="app-group">
+	    <div class="app-statement">
+	    </div>
+        <div class="container-large">
+         {%  for post in PODLIST[0 : 100] %}
+
+            <h3 class="text-success">{{ post.get('podTitle') }}</h3>
+            <p>{{ post.get('podSummary') }}</p>
+            <p>{{ post.get('podDate') }}</p>
+            <p><a class="btn btn-default" href="{{ post.get('podURL') }}">Direct Link</a></p>
+            <hr>
+
+        {% endfor %}
+
+
+        </div>
+    </div>
+
+{% endblock %}
